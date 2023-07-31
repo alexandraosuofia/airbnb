@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airbnb | Vacation homes and condo Rentals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://kit.fontawesome.com/c5194eabb0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <i class="fa-brands fa-airbnb fa-3x"></i>
+        <h3 class="logo">Airbnb</h3>
+      </div>
+      <div class="search-container">
+        <div class="search-container1">
+          <a href="#" class="search-word">Anywhere &nbsp; &nbsp; | </a>
+        </div>
+        <div class="search-container1">
+          <a href="#" class="search-word">Anyweek &nbsp; &nbsp; |</a>
+        </div>
+        <div class="search-container1 icon">
+          <a href="#" class="search-word">Add guests </a>
+          <a href="#"><i class="fa fa-solid fa-magnifying-glass"></i> </a>
+        </div>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li>
+            <a class="nav-linkhome" href="#" target="_blank"
+              >Airbnb your home</a
+            >
+          </li>
+          <li>
+            <a class="nav-link" href="#"><i class="fa-solid fa-globe"></i></a>
+          </li>
+          <div class="nav-linkicons">
+            <li>
+              <a class="nav-link" href="#"><i class="fa-solid fa-bars"></i></a>
+            </li>
+            <li>
+              <a class="nav-link" href="#"
+                ><i class="fa-regular fa-user"></i
+              ></a>
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="icon-container">
+        <span id="clickable-icon" class="clickable-icon">
+          <i class="fa-solid fa-bed"></i>
+          <p class=>Rooms</p>
+        </span>
+        <span id="clickable-icon" class="clickable-icon">
+          <i class="fa-solid fa-person-swimming"></i>
+          <p>Pools</p>
+        </span>
+        <span id="clickable-icon" class="clickable-icon">
+          <i class="fa-solid fa-water"></i>
+          <p>Beachfront</p>
+        </span>
+        <span id="clickable-icon" class="clickable-icon">
+          <i class="fa-solid fa-mug-saucer"></i>
+          <p>Bed &amp; Breakfast</p>
+        </span>
+        <span id="clickable-icon" class="clickable-icon">
+          <i class="fa-solid fa-tree"></i>
+          <p>Islands</p>
+        </span>
+        <span id="clickable-icon" class="clickable-icon">
+          <i class="fa-solid fa-house-chimney"></i>
+          <p>Countryside</p>
+        </span>
+        <button type="button" class="cta-btn">
+          <i class="fa-solid fa-filter"></i>
+          <p>Filters</p>
+        </button>
+      </section>
+<section class="toggle-container">
+  <div class="display-wrapper">
+    <p>Display total price </p>
+    <span class="stroke">|</span>
+    <p class="display-total-price">Includes all fees, before taxes</p>
+  </div>
+ <div class="toggle">
+  <label class="switch">
+<input type="checkbox">
+<span class="slider"></span>
+</label>
+ </div>
+</section>
+
+<!--carousel-container-->
+ <section class="carousel-container">
+  <div class="carousel-wrapper">
+<div class="carousel-fade">
+ <span class="font-fade"><i class="fa-regular fa-heart"></i></span>
+ <img src="images/hotel-exterior1.jpg" alt="hotel exterior">
+ <div class="arrow-btn">
+  <a class="prev" onclick="plusSlide(-1)"> &#10094</a>
+<a class="next" onclick="plusSlide(1)"> &#10095</a>
+</div>
+<div class="dot-section">
+  <span class="dot" onclick="currentSlide(1)">&#8226</span>
+  <span class="dot" onclick="currentSlide(2)">&#8226</span>
+  <span class="dot" onclick="currentSlide(3)">&#8226</span>
+</div>
+</div>
+<div class="carousel-fade">
+  <span class="font-fade"><i class="fa-regular fa-heart"></i></span>
+  <img src="images/hotel-interior3.jpg" alt="hotel interior">
+  <div class="arrow-btn">
+    <a class="prev" onclick="plusSlide(-1)"> &#10094</a>
+  <a class="next" onclick="plusSlide(1)"> &#10095</a>
+  </div>
+  <div class="dot-section">
+    <span class="dot" onclick="currentSlide(1)">&#8226</span>
+    <span class="dot" onclick="currentSlide(2)">&#8226</span>
+    <span class="dot" onclick="currentSlide(3)">&#8226</span>
+  </div>
+</div>
+<div class="carousel-fade">
+  <span class="font-fade"><i class="fa-regular fa-heart"></i></span>
+  <img src="images/hotel-interior2.jpg" alt="hotel interior">
+  <div class="arrow-btn">
+    <a class="prev" onclick="plusSlide(-1)"> &#10094</a>
+  <a class="next" onclick="plusSlide(1)"> &#10095</a>
+  </div>
+  <div class="dot-section">
+    <span class="dot" onclick="currentSlide(1)">&#8226</span>
+    <span class="dot" onclick="currentSlide(2)">&#8226</span>
+    <span class="dot" onclick="currentSlide(3)">&#8226</span>
+  </div>
+</div>
+
+<div class="text">
+  <div class="text-info">
+    <h4>Drmnin, UK</h4>
+    <span class="text-distance">5,637 kilometres away <br> Jan 22-29 </span>
+    <p><span class="bold">$250</span> night</p>
+  </div>
+<div class="rating">
+  <i class="fa-solid fa-star"></i>
+  <p>4.94</p>
+</div>
+</div>
+
+</div>
+
+ </section>
+ 
+ 
+  <!--<div class="toggle">
+    <input type="checkbox" id="toggle-checkbox" class="togglecheckbox">
+    <label for="toggle-checkbox" class="toggle-label"></label>
+ </div>--> 
+
+      <!-- <section class="icon-container">
+        <div class="icon-items">
+          <a href="#"><i class="fa-solid fa-bed fa-2x"></i></a>
+          <p>Rooms</p>
+        </div>
+        <div class="icon-items">
+          <a href="#"><i class="fa-solid fa-person-swimming fa-2x"></i></a>
+          <p>Pools</p>
+        </div>
+        <div class="icon-items">
+          <a href="#"><i class="fa-solid fa-water fa-2x"></i></a>
+          <p>Beachfront</p>
+        </div>
+        <div class="icon-items">
+          <a href="#"><i class="fa-solid fa-mug-saucer fa-2x"></i></a>
+          <p>Bed &amp; Breakfast</p>
+        </div>
+        <div class="icon-items">
+          <a href="#"><i class="fa-solid fa-tree fa-2x"></i></a>
+          <p>Island</p>
+        </div>
+        <div class="icon-items">
+          <a href="#"><i class="fa-solid fa-house-chimney fa-2x"></i></a>
+          <p>Countryside</p>
+        </div>
+      </section>-->
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

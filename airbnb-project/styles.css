@@ -1,0 +1,372 @@
+/*global*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --green: #027933;
+    --black: #100B00 ;
+    --gray: rgba(0, 0, 0, 0.5);
+    --border: 4px solid rgba(0,0,0,0.3);
+    --outline:2px solid rgba(0,0,0,0.2); 
+    --box-shadow: 3px 3px 5px rgba(0,0,0,0.3), 3px 3px 5px #fff;
+    }
+    
+body{
+    font-family: 'Poppins', sans-serif;
+   /* background-color: #eee;*/
+}
+
+/*nav bar*/
+header{
+    display: flex;
+    height: 15vh;
+    padding: 25px;
+    border-bottom: var(--outline);
+    align-items: center;
+    justify-content: space-around;
+   /* position: sticky;
+    background-color: #fff;*/
+}
+
+header nav{
+    margin: 10px 0px 0px 15px;
+    flex: 1;
+}
+
+.logo-container{
+    flex: 0.8;
+    display: flex;
+    align-items: center;
+}
+
+.search-container{
+    flex: 1;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+    border: var(--outline);
+    border-radius: 40px;
+}
+
+.search-container a{
+text-decoration: none;
+color: black;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+}
+
+.icon a{
+    margin-right: 1.5rem;
+}
+
+nav > ul > li{
+margin-bottom: 18px;
+}
+
+.nav-links{
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+list-style-type: none;
+}
+
+nav > ul> li> a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-linkhome, .nav-linkicons{
+    border: none;
+    border-radius: 40px;
+    padding: 5px 10px;
+    display: flex;
+}
+
+.nav-linkicons{
+   margin-bottom: 20px;
+    border: var(--outline);
+}
+
+.nav-linkicons>li{
+    margin: 0px 10px;
+}
+
+.nav-linkicons > li > a{
+    color: black;
+}
+
+nav > ul> li> a:hover{
+   transform: scale(0.98);
+   background-color:rgb(189, 153, 153, 0.1)
+};
+
+/*main*/
+#clickable-icon{
+    cursor:pointer;
+}
+
+.clickable-icon{
+    display: inline-block;
+position: relative;
+}
+.clickable-icon i{
+    color: rgba(0, 0, 0, 0.5);
+    
+}
+
+.clickable-icon p{
+    font-size: 12px;
+}
+
+/*underline animation on icons*/
+.clickable-icon::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    background-color: var(--black);
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom right;
+}
+
+.clickable-icon:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    transition: transform 0.3s linear;
+    margin-bottom: -5px;
+}
+
+.icon-container {
+display: flex;
+align-items: center;
+justify-content: space-around;
+text-align: center;
+height: 10vh;
+padding: 25px;
+}
+
+/*filter button*/
+.cta-btn{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: var(--gray);
+    border-radius: 10px;
+    color: var(--black);
+}
+
+.cta-btn:hover{
+    border: var(--black);
+    transform: scale(0.98);
+}
+.cta-btn p{
+    margin-left: 5px;
+    font-size:12px ;
+}
+
+/*display-wrapper*/
+.display-wrapper{
+    display: flex;
+    margin-right: 70px; 
+}
+
+.display-wrapper p{
+    margin-right: 5px;
+}
+
+.stroke{
+    margin-right: 5px;
+}
+
+/*Toggle Section*/
+
+.toggle-container{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: var(--outline);
+    width: 50%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+/*the box around  the slider*/
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+/*to hide the default HTML checkbox*/
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+/*the slider*/
+.slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    border-radius: 34px;
+    background-color: #ccc;
+    transition: 0.4s;
+}
+
+.slider::before{
+    position: absolute;
+    content: "";
+    height: 26px;
+    width:26px;
+    background-color: white;
+    left: 4px;
+    bottom: 4px;
+    border-radius:50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider{
+    background-color: #2196f3;
+}
+
+input:checked + .slider::before{
+    transform: translateX(26px);
+}
+
+/*CAROUSEL SECTION*/
+.carousel-wrapper{
+    padding: 10px 30px;
+  
+}
+
+.carousel-fade{
+    max-width: 300px;
+    position: relative;
+    /*hiding images by default*/
+   display: none;
+}
+
+.carousel-fade img{
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+}
+
+.text{
+    display: flex;
+}
+
+.text-info{
+    margin-right: 5rem;
+}
+
+.font-fade{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/*previous and nextbuttons*/
+.arrow-btn a{
+    cursor: pointer;
+    font-size: 17px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    color: white;
+    border-radius: 5px;
+    background-color: var(--gray);
+    transition: 0.5s ease;
+}
+
+.next{
+    right: 10px;
+}
+
+.prev{
+    left: 10px;
+}
+
+.dot-section{
+    cursor: pointer;
+    font-size: 30px;
+    color: black;
+    position: absolute;
+    bottom: 2%;
+    right: 45%;
+    color: #bbb
+}
+
+.active, .dot:hover{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.toggle{
+    display: inline-block;
+    width: 60px;
+    height: 38px;
+    background-color: #8eeb60;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.toggle input [type="checkbox"]{
+    display: none;
+}
+
+.toggle-label{
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 34px;
+}
+
+.toggle-label::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    border-radius: 34px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.25 ease-in-out;
+}
+
+.toggle-checkbox:checked + .toggle-label::before{
+    transform: translateX(35px);
+}
